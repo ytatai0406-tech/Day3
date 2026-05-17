@@ -1,0 +1,12 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.bak

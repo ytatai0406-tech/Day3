@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なんでもない日常 | Izu Surf & Outdoor Log</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-wave-container">
+        <!-- Wave decoration will be added via CSS/SVG -->
+    </div>
+
+    <header>
+        <div class="header-content glass">
+            <h1 class="site-title"><span class="highlight-na">な</span>んでもない日常</h1>
+            <p class="site-tagline">Izu Surf & Outdoor Photo Log</p>
+        </div>
+    </header>
+
+    <main id="app">
+        <section class="timeline" id="log-container">
+            <!-- Log entries will be injected here by JS -->
+            <div class="empty-state">
+                <p>まだ記録がありません。はじめての日常を記録してみませんか？</p>
+            </div>
+        </section>
+
+        <!-- Fixed Action Button for adding new post -->
+        <button id="add-post-btn" class="fab ripple" aria-label="投稿する">
+            <span class="icon">+</span>
+        </button>
+
+        <!-- Post Modal -->
+        <div id="post-modal" class="modal hidden">
+            <div class="modal-content glass">
+                <button class="close-btn">&times;</button>
+                <h2>日常を記録する</h2>
+                <form id="post-form">
+                    <div class="input-group">
+                        <label for="post-text">短文</label>
+                        <textarea id="post-text" placeholder="今日の波、感じたこと..." required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="post-image">写真のURL (またはファイル管理)</label>
+                        <input type="text" id="post-image" placeholder="https://example.com/photo.jpg">
+                    </div>
+                    <div class="input-group grid-2">
+                        <div>
+                            <label for="post-wave">波の情報 (オプション)</label>
+                            <input type="text" id="post-wave" placeholder="腹〜胸、オフショア">
+                        </div>
+                        <div>
+                            <label for="post-place">場所</label>
+                            <input type="text" id="post-place" placeholder="白浜、入田浜...">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn hov-effect">静かに保存する</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 なんでもない日常</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
